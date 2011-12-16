@@ -103,14 +103,14 @@ public class FormatOutput {
 
     public String HtmlFormatting (String [] word,String [] Suggestions) {
 
-        if (word[0].equals("")) {
+        if (word[0].equals(" ")) {
 
             word[0] = " ";
 
-        } if (word[1].equals("")) {
+        } if (word[1].equals(" ")) {
 
             word[1] = " ";
-        } if (word[2].equals("")) {
+        } if (word[2].equals(" ")) {
             
             word[2] = " ";
         }
@@ -224,6 +224,8 @@ return TXword;
         
     }
 
+
+    
 
 
 }

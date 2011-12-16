@@ -216,8 +216,8 @@ public class Lookup {
 
             }
 
-
-            rs = stat.executeQuery("select * from " + TTable + " where word like '" + word + "%' ;");
+            rs = stat.executeQuery("select distinct word from " + TTable + " where word like '" + word + "%' ;");
+            System.out.println("select distinct word from " + TTable + " where word like '" + word + "%' ;");
             int t = 0;
             String str;
 
@@ -231,7 +231,7 @@ public class Lookup {
                     t++;
                 }
             }
-
+            
             rs.close();
             conn.close();
 
@@ -239,14 +239,10 @@ public class Lookup {
             e.getMessage();
         }
 
-
         int u = 0;
 
         for (u = 0; u < 2; u++) {
-            // System.out.println("M: "+Meanings[u]);
-            //   System.out.println("S:"+Synonyms.getItem(u));
-//       System.out.println("A:"+Antinyms.getItem(u));
-            //   System.out.println(Meanings.l);
+
         }
 
     }

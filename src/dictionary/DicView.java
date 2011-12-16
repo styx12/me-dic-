@@ -201,7 +201,7 @@ public class DicView extends javax.swing.JFrame {
 
         ld = new LanguageDeterminator();
 
-        if (!jTextField1.getText().trim().equals("")) {
+        if (!jTextField1.getText().toString().trim().equals("")) {
 
             if (ld.Direction(jTextField1.getText().trim()).equals("uno")) {
 
@@ -235,7 +235,7 @@ public class DicView extends javax.swing.JFrame {
                 lookup.Search(jTextField1.getText().toString().trim(), "F2E", "FSYN", "FANTI");
 
               //  rawWord = forop.formatText(lookup.Meanings, lookup.Synonyms, lookup.Antinyms);
-   rawWord = forop.formatText(forop.dupRemover(lookup.Meanings),
+                rawWord = forop.formatText(forop.dupRemover(lookup.Meanings),
                         forop.dupRemover(lookup.Synonyms),forop.dupRemover(lookup.Antinyms));
 
 
